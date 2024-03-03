@@ -24,7 +24,7 @@ In this context, a "conversion" can be any action that you want the user to perf
 ## Project Overview
 
 In this project, we performed a comprehensive analysis of our marketing campaign data to identify trends and issues affecting our conversion rates during January 2018. Here's a summary of the steps we took and the findings from our investigation:
-- [1. Data Retrieval](#data-retrieval) We extracted the relevant data using SQL queries from a PostgreSQL database, ensuring we had all necessary information for a thorough analysis.(You should first move marketing csv to /tmp)
+- [1. Data Retrieval](#data-retrieval) We extracted the relevant data using SQL queries from a PostgreSQL database, ensuring we had all necessary information for a thorough analysis.
 - [2. Initial Exploration and Data Cleaning](#initial-exploration-and-data-cleaning): Using SQL, we conducted an initial exploration of the data to understand the overall trends and patterns, setting the stage for a deeper analysis. Then, we focused on cleaning the date columns to ensure consistency and accuracy in our dataset, which was crucial for time-based analysis.
 - [3. Data Handling and Visualization](#data-handling-and-visualization): By using Python, We initiated by establishing interaction with the SQL Database, importing necessary libraries for secure access, and verifying the connection using SQLAlchemy. Subsequently, we managed the data by importing essential manipulation libraries, loading data into a Pandas DataFrame, and analyzing its structure including duplicates and missing values. Finally, we visualized insights through Matplotlib, analyzing categorical columns, illustrating distributions with pie charts, and observing daily user trends by grouping data and plotting.
 - [4. Conversion Rate Analysis](#conversion-rate-analysis): We calculated the conversion rates for various groups within our data. By segmenting the data, we were able to identify specific trends and patterns that were not immediately apparent from the overall data.
@@ -35,7 +35,7 @@ In this project, we performed a comprehensive analysis of our marketing campaign
 ## Data Retrieval
 In simple terms, the data retrieval process involves two steps:
 - Creating a Table: We define a structure in the PostgreSQL database to hold our marketing data, specifying what type of information each column contains (like text, dates, or true/false values).
-- Importing Data: We take a CSV file from our computer (/tmp/marketing.csv), which contains marketing data from DataCamp, and insert its contents into the database table we just created. This makes the data ready for analysis and querying within the database.
+- Importing Data: We take a CSV file from github, which contains marketing data from DataCamp, and insert its contents into the database table we just created. This makes the data ready for analysis and querying within the database.
 ```
 CREATE TABLE marketing (
     user_id VARCHAR(255),
@@ -53,7 +53,7 @@ CREATE TABLE marketing (
 );
 ```
 ```
-COPY marketing FROM '[/tmp/marketing.csv](https://github.com/sophisticated21/An-Analysis-of-House-Ads-Campaign-Effectiveness/blob/main/Data/marketing.csv)' DELIMITER ',' CSV HEADER;
+COPY marketing FROM 'https://github.com/sophisticated21/An-Analysis-of-House-Ads-Campaign-Effectiveness/blob/main/Data/marketing.csv' DELIMITER ',' CSV HEADER;
 ```
 
 ## Initial Exploration and Data Cleaning 
