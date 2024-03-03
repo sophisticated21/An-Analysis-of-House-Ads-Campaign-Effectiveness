@@ -53,7 +53,7 @@ CREATE TABLE marketing (
 );
 ```
 ```
-COPY marketing FROM 'https://github.com/sophisticated21/An-Analysis-of-House-Ads-Campaign-Effectiveness/blob/main/Data/marketing.csv' DELIMITER ',' CSV HEADER;
+COPY marketing FROM 'https://raw.githubusercontent.com/sophisticated21/An-Analysis-of-House-Ads-Campaign-Effectiveness/main/Data/marketing.csv' DELIMITER ',' CSV HEADER;
 ```
 
 ## Initial Exploration and Data Cleaning 
